@@ -1,0 +1,25 @@
+# 忽略全部，仅放行下方白名单（站点根 = 网站文件直接位于仓库根）
+*
+!.gitignore
+
+# 网站内容（仓库根即 Pages 根）
+!index.html
+!assets/
+!assets/**
+!books/
+!books/**
+!grp/
+!grp/**
+
+# 构建工具与配置（代码）
+!pdfbook/
+!pdfbook/**
+!config/
+!config/**
+
+# Python 缓存不入库
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

@@ -1,0 +1,1 @@
+window.I18N={zh:{title:"静态章节阅读站"},de:{title:"Statische Lesestätte"}};
