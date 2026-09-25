@@ -3,6 +3,7 @@
 !.gitignore
 
 # 网站内容（仓库根即 Pages 根）
+!README.md
 !index.html
 !assets/
 !assets/**
