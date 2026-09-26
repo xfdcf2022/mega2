@@ -102,8 +102,9 @@ function mountFs(){
     const nav = on ? window.BOOK.tp : window.BOOK.nav;
     return nav.map(n => {
       const isCur = on ? (cur && n.url && n.url.indexOf('/' + cur + '-') >= 0) : (n.id === cur);
+      const u = on ? '../' + n.url : n.url;  // tp 的 url 相对卷页；侧栏在 ch/ 下需回退一级
       return '<li><a class="lvl' + (n.level || 0) + (isCur ? ' cur' : '') + '" href="' +
-        n.url + '">' + esc(n.title) + '</a></li>';
+        u + '">' + esc(n.title) + '</a></li>';
     }).join('');
   };
   const nav = window.BOOK.nav;
