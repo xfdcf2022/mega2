@@ -62,4 +62,10 @@ font-size:.88em;line-height:1.35;border-left:2px solid transparent}
 .lvl0{padding-left:2px}.lvl1{padding-left:12px}.lvl2{padding-left:24px}.lvl3{padding-left:36px}
 .fside .pn{display:flex;gap:8px;margin-top:14px;border-top:1px solid var(--line);padding-top:10px;font-size:.85em}
 .fside .pn a{flex:1;border:1px solid var(--line);text-align:center;padding:6px;color:var(--accent)}
+.tocmode{display:inline-flex;gap:4px;margin:0 0 10px;font-family:var(--sans)}
+.tocmode button{border:1px solid var(--line);background:#fff;color:var(--muted);
+  font-size:.8em;padding:4px 10px;border-radius:16px;cursor:pointer}
+.tocmode button.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.fside .tocmode{display:flex;margin:0 0 8px}
+.fside .tocmode button{flex:1;text-align:center}
 @media(max-width:640px){body{font-size:15px}}

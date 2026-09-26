@@ -373,5 +373,273 @@ window.BOOK = {
       "title": "Sachregister",
       "url": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0021-sachregister.html"
     }
+  ],
+  "tp": [
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp004",
+      "level": 2,
+      "title": "Erster Entwurf",
+      "print_start": 3,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp005",
+      "level": 2,
+      "title": "Zweiter Entwurf",
+      "print_start": 8,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp001",
+      "level": 6,
+      "title": "Text Apparat Einleitung",
+      "print_start": 9,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp006",
+      "level": 0,
+      "title": "Karl Marx • Zur Kritik der politischen Ökonomie. Urtext",
+      "print_start": 17,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp007",
+      "level": 2,
+      "title": "Zweites Kapitel. Das Geld",
+      "print_start": 19,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp008",
+      "level": 6,
+      "title": "2. Das Geld als Zahlungsmittel",
+      "print_start": 19,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp002",
+      "level": 0,
+      "title": "Editorische Hinweise",
+      "print_start": 27,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp010",
+      "level": 5,
+      "title": "4. Die edlen Metalle als Träger des Geldverhältnisses",
+      "print_start": 39,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp012",
+      "level": 5,
+      "title": "6. Übergang zum Kapital",
+      "print_start": 63,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp013",
+      "level": 2,
+      "title": "Drittes Kapitel. Das Kapital",
+      "print_start": 85,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp014",
+      "level": 2,
+      "title": "A. Produktionsprozeß des Kapitals",
+      "print_start": 85,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp015",
+      "level": 5,
+      "title": "1. Verwandlung des Geldes in Kapital",
+      "print_start": 85,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp016",
+      "level": 5,
+      "title": "Zusätze",
+      "print_start": 93,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0000-inhalt.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp017",
+      "level": 0,
+      "title": "Karl Marx · Zur Kritik der politischen Ökonomie. Erstes Heft",
+      "print_start": 95,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0001-einleitung.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp018",
+      "level": 2,
+      "title": "Vorwort",
+      "print_start": 99,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0001-einleitung.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp019",
+      "level": 2,
+      "title": "Erstes Buch. Vom Kapital",
+      "print_start": 105,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0001-einleitung.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp020",
+      "level": 4,
+      "title": "Abschnitt I. Das Kapital im Allgemeinen",
+      "print_start": 107,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0001-einleitung.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp021",
+      "level": 6,
+      "title": "Erstes Kapitel. Die Ware",
+      "print_start": 107,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0001-einleitung.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp022",
+      "level": 6,
+      "title": "A. Historisches zur Analyse der Ware",
+      "print_start": 130,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0003-index-zu-den-7-heften-dem-erst.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp025",
+      "level": 1,
+      "title": "Karl Marx • Planentwurf zum Kapitel über das Kapital",
+      "print_start": 256,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0005-karl-marx-zur-kritik-der-polit.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp026",
+      "level": 1,
+      "title": "KarI Marx • Verzeichnis zu dem Zitatenheft",
+      "print_start": 264,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0005-karl-marx-zur-kritik-der-polit.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp040",
+      "level": 1,
+      "title": "Seite 21 aus Heft B\"",
+      "print_start": 265,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0005-karl-marx-zur-kritik-der-polit.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp041",
+      "level": 1,
+      "title": "Seite 22 aus Heft B\"",
+      "print_start": 266,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0005-karl-marx-zur-kritik-der-polit.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp042",
+      "level": 1,
+      "title": "Seite 26 aus Heft B\"",
+      "print_start": 269,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0005-karl-marx-zur-kritik-der-polit.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp027",
+      "level": 1,
+      "title": "Karl Marx • Referate zu meinen eignen Heften",
+      "print_start": 272,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0005-karl-marx-zur-kritik-der-polit.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp043",
+      "level": 1,
+      "title": "Seite 28 aus Heft B\"",
+      "print_start": 273,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0005-karl-marx-zur-kritik-der-polit.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp028",
+      "level": 1,
+      "title": "Karl Marx • Über die Teilung der Arbeit",
+      "print_start": 287,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0006-friedrich-engels-rezension-zu-.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp029",
+      "level": 1,
+      "title": "Kar! Marx • Über die Grundrente",
+      "print_start": 289,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0006-friedrich-engels-rezension-zu-.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp044",
+      "level": 1,
+      "title": "Anfang einer Lektion über die Grundrente",
+      "print_start": 291,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0006-friedrich-engels-rezension-zu-.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp045",
+      "level": 1,
+      "title": "Erste Umschlagseite des Heftes B1",
+      "print_start": 319,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0010-karl-marx-zur-kritik-der-polit.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp046",
+      "level": 1,
+      "title": "Seite 13 aus Heft B1",
+      "print_start": 320,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0010-karl-marx-zur-kritik-der-polit.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp047",
+      "level": 1,
+      "title": "Seite 38 aus Heft B\"",
+      "print_start": 333,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0010-karl-marx-zur-kritik-der-polit.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp030",
+      "level": 1,
+      "title": "REGISTER Literaturregister",
+      "print_start": 467,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0018-register.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp031",
+      "level": 5,
+      "title": "I. Arbeiten von Marx und Engels",
+      "print_start": 467,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0018-register.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp032",
+      "level": 4,
+      "title": "II. Arbeiten anderer Autoren",
+      "print_start": 468,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0019-literaturregister.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp033",
+      "level": 3,
+      "title": "III. Periodica",
+      "print_start": 480,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0019-literaturregister.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp034",
+      "level": 1,
+      "title": "Namenregister",
+      "print_start": 482,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0020-namenregister.html"
+    },
+    {
+      "id": "2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-tp035",
+      "level": 1,
+      "title": "Sachregister",
+      "print_start": 492,
+      "url": "ch/2-larissa-miskewitsch_-irina-antonowa_-ljudmila-vasina-gesamtausgabe-mega-_-band-bm0021-sachregister.html"
+    }
   ]
 };

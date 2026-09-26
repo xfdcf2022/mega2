@@ -35,6 +35,91 @@ def walk_root(doc: fitz.Document, cap_id: str, toc_max_level: int = 2):
                      pdf_start=1, pdf_end=doc.page_count, source="book")]
 
 
+def walk_tocpage(doc: fitz.Document, cap_id: str, scan: int = 80) -> list:
+    """坐标版印刷目录(Inhalt 页)解析：页码独立一行、层级取 x 缩进聚类(4pt)。
+
+    与 _find_toc_pages 互补：后者要求"标题+点线+页码同行"，而带星号/独立行页码
+    的 Inhalt 版式需按版面还原。返回 print_start 对齐的 tocpage 条目(无 pdf)。"""
+    pages = _find_inhalt_pages(doc, scan)
+    if not pages:
+        return []
+    H = doc[0].rect.height
+    toks = []  # (y, x, kind, val)
+    for pg in pages:
+        for y, x, t in _coord_lines(doc, pg):
+            if not t or t == "*" or t.strip().lower() == "inhalt":
+                continue
+            m = re.match(r"^\s*(\d{1,4})\s*\*?\s*$", t)
+            n = int(m.group(1)) if m else None
+            if n is not None and y > H * 0.94:  # 页脚号
+                continue
+            toks.append((y, x, "N" if n is not None else "T", n if n is not None else t))
+    pairs = []  # [(多行(x,t)...), 页码]
+    cur = []
+    for _y, x, kind, val in toks:
+        if kind == "N":
+            if cur:
+                pairs.append((cur, val))
+                cur = []
+        else:
+            cur.append((x, val))
+    # 尾部未闭合标题(无页码)丢弃
+    bins = sorted({int(x // 4) * 4 for ls, _ in pairs for x, _ in ls})
+    level_of = {x: i for i, x in enumerate(bins)}
+    out, seen = [], set()
+    for seq, (ls, nr) in enumerate(pairs, 1):
+        if nr is None:
+            continue
+        lv = min(level_of.get(int(ls[0][0] // 4) * 4, 0), 6)
+        title = re.sub(r"\s+", " ", " ".join(t for _, t in ls)).strip()
+        if not title or len(title) > 60:
+            continue
+        key = (lv, title, nr)
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(TocEntry(id=f"{cap_id}-tp{seq:03d}", level=lv, title=title,
+                            print_start=nr, source="tocpage"))
+    return out
+
+
+def _coord_lines(doc: fitz.Document, pg: int):
+    out = []
+    for blk in doc[pg - 1].get_text("dict")["blocks"]:
+        for ln in blk.get("lines", []):
+            sp = ln.get("spans", [])
+            if not sp:
+                continue
+            t = "".join(s["text"] for s in sp).strip()
+            if not t:
+                continue
+            out.append((ln["bbox"][1], min(s["bbox"][0] for s in sp), t))
+    return out
+
+
+def _find_inhalt_pages(doc: fitz.Document, scan: int) -> list:
+    """目录页判定：数字独立行 >=6 且 页首行含 'inhalt'（正文分卷页会被排除）。"""
+    cands = []
+    for pg in range(1, min(doc.page_count, scan) + 1):
+        lines = _coord_lines(doc, pg)
+        if not lines:
+            continue
+        nd = sum(1 for _, _, t in lines if re.match(r"^\s*(\d{1,4})\s*\*?\s*$", t))
+        if nd < 6:
+            continue
+        _, _, top = min(lines, key=lambda r: r[0])
+        if "inhalt" in top.strip().lower():
+            cands.append(pg)
+    if cands:
+        return cands
+    # 兜底(无 Inhalt 页眉的卷)：高密度数字行页
+    for pg in range(1, min(doc.page_count, scan) + 1):
+        lines = _coord_lines(doc, pg)
+        if sum(1 for _, _, t in lines if re.match(r"^\s*(\d{1,4})\s*\*?\s*$", t)) >= 8:
+            cands.append(pg)
+    return sorted(set(cands))
+
+
 def _find_toc_pages(texts: list) -> list:
     cands = []
     for i, t in enumerate(texts):

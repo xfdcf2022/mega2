@@ -49,6 +49,8 @@ def _build_book(b: dict, out: Path, render_images: str, ml: int, band: float, im
     nav = []
     try:
         chapters = [e for e in b["toc"] if e.level <= ml and e.pdf_start]
+        tpn = _tp_nav([e for e in (b.get("tocpage") or [])
+                       if e.print_start and e.pdf_start], chapters)
         for e in chapters:
             mode_text = grade in ("T", "S")
             mode_img = b["cap"].has_images and render_images != "none"
@@ -65,6 +67,7 @@ def _build_book(b: dict, out: Path, render_images: str, ml: int, band: float, im
         doc.close()
     book = {k: b[k] for k in ("id", "title_de", "title_zh", "group", "cap", "toc")}
     book["nav"] = nav
+    book["tp"] = tpn
     (bg / "data.js").write_text(f"window.BOOK = {dumps(book)};", encoding="utf-8")
     _write_book_page(b, chapters, bg)
 
@@ -126,10 +129,31 @@ def slugch(ch) -> str:
     return f"{ch.id}-{s}"
 
 
+def _tp_nav(tp: list, chapters: list) -> list:
+    out = []
+    for e in tp:
+        out.append({"id": e.id, "level": e.level, "title": e.title,
+                    "print_start": e.print_start, "url": _tp_target(e, chapters)})
+    return out
+
+
+def _tp_target(e, chapters: list) -> str:
+    s = e.pdf_start or 0
+    hit = [c for c in chapters if c.pdf_start and c.pdf_end >= s and c.pdf_start <= s]
+    target = hit[0] if hit else next((c for c in chapters if c.pdf_start and c.pdf_start >= s), None) \
+        if chapters else None
+    target = target or (chapters[-1] if chapters else None)
+    return f"ch/{slugch(target)}.html" if target else "../index.html"
+
+
 def _write_book_page(b: dict, chapters: list, bg: Path) -> None:
-    rows = "".join(f'<li><lvl>L{e.level}</lvl><a href="ch/{slugch(e)}.html">{escape(e.title)}</a>'
-                   f'<span style="color:var(--muted);margin-left:auto">S.{e.print_start or "-"}</span></li>'
-                   for e in chapters)
+    dual = bool([e for e in (b.get("tocpage") or []) if e.print_start and e.pdf_start])
+    if dual:
+        rows = '<div class="tocmode" id="tocMode" hidden></div><ul class="toc" id="tocList"></ul>'
+    else:
+        rows = "".join(f'<li><lvl>L{e.level}</lvl><a href="ch/{slugch(e)}.html">{escape(e.title)}</a>'
+                       f'<span style="color:var(--muted);margin-left:auto">S.{e.print_start or "-"}</span></li>'
+                       for e in chapters)
     cap = b["cap"]
     bg.joinpath("index.html").write_text(
         f'<!doctype html><html lang="zh"><head><meta charset="utf-8">'
@@ -140,7 +164,8 @@ def _write_book_page(b: dict, chapters: list, bg: Path) -> None:
         f'<main><h2>{escape(b.get("title_de") or "")}</h2>'
         f'<p style="color:var(--muted)">{cap.grade} 级 · {cap.pages} 页 · 约 {round(cap.chars_per_page)} 字符/页'
         f' · 书签 {"有" if cap.has_bookmarks else "无"}</p>'
-        f'<h3>章节目录</h3><ul class="toc">{rows}</ul></main>'
+        f'<h3>章节目录</h3>{rows}</main>'
+        f'<script src="../../assets/js/app.js"></script>'
         f'<script src="../../assets/js/search.js"></script></body></html>',
         encoding="utf-8")
 

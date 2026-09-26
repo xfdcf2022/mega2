@@ -13,12 +13,39 @@ from . import site as site_m, toc as toc_m
 from .model import Capability, TocEntry, default_group, load_json, save_json, slugify
 
 
+def _interp(pg: int, anchors: list):
+    prevs = [(q, d) for q, d in anchors if q < pg]
+    nexts = [(q, d) for q, d in anchors if q > pg]
+    if prevs and nexts:
+        q0, d0 = prevs[-1]
+        q1, d1 = nexts[0]
+        return max(1, int(d0 + (pg - q0) * (d1 - d0) / max(1, q1 - q0)))
+    if prevs:
+        return prevs[-1][1] + (pg - prevs[-1][0])
+    if nexts:
+        return max(1, nexts[0][1] - (nexts[0][0] - pg))
+    return None
+
+
+def _tocpage_map(tp, pm: dict) -> list:
+    """tocpage 条目按 print 序排序，p2p 命中的填 pdf_start，缺档用相邻锚点插值。"""
+    p2p = {int(k): int(v) for k, v in (pm or {}).get("print2pdf", {}).items()}
+    tp = [e for e in tp if e.print_start]
+    tp.sort(key=lambda e: e.print_start)
+    anchors = [(e.print_start, p2p[e.print_start]) for e in tp if e.print_start in p2p]
+    for e in tp:
+        e.pdf_start = p2p.get(e.print_start) or _interp(e.print_start, anchors)
+    return tp
+
+
 def _norm(b: dict, group: str) -> dict:
     b = dict(b)
     b["group"] = group or b.get("group") or "未分组"
     b["cap"] = Capability(**b["cap"]) if isinstance(b.get("cap"), dict) else b.get("cap")
     if isinstance(b.get("toc"), list):
         b["toc"] = [t if isinstance(t, TocEntry) else TocEntry(**t) for t in b["toc"]]
+    if isinstance(b.get("tocpage"), list):
+        b["tocpage"] = [t if isinstance(t, TocEntry) else TocEntry(**t) for t in b["tocpage"]]
     return b
 
 
@@ -64,9 +91,10 @@ def _main(argv=None):
         pm_m.build(doc, pid, toc, work)
         pm = load_json(work / f"pagemap/{pid}.json")
         pm_m.apply_toc_pages(toc, pm, doc.page_count)
+        tp = _tocpage_map(toc_m.walk_tocpage(doc, pid), pm)
         doc.close()
         meta = (catalog or {}).get("books", {}).get(pid, {}) or {}
-        b = {"id": pid, "path": p, "cap": cap, "toc": toc, "pm": pm,
+        b = {"id": pid, "path": p, "cap": cap, "toc": toc, "tocpage": tp, "pm": pm,
              "title_de": meta.get("title_de", pid), "title_zh": meta.get("title_zh", ""),
              "group": meta.get("group") or default_group(Path(p).stem)}
         save_json(bj, b)
